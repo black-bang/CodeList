@@ -1,0 +1,237 @@
+@import "../../lib/reset.scss";
+// 二维码 Code
+.box,
+.addCode_box,
+.datail_box,
+.Updata_box {
+  @include rect(100%, 100%);
+  overflow-y: auto;
+  .top {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    @include rect(100%, 0.4rem);
+    background-color: #fff;
+    border-bottom: 0.01rem solid #ddd;
+    .top_text {
+      @include rect(80%, 100%);
+      margin-left: 20%;
+      @include flexbox();
+      @include flex-direction(column);
+      @include flex-wrap(wrap);
+      line-height: 0.4rem;
+      font-size: 0.18rem;
+      color: #fff;
+
+      .header_title {
+        @include rect(70%, 100%);
+        text-align: center;
+        color: #000;
+      }
+      span {
+        @include rect(25%, 100%);
+        text-align: right;
+        color: #eee;
+        .test {
+          img {
+            display: none;
+          }
+        }
+        a {
+            color: #000;
+          font-size: 0.32rem;
+        }
+      }
+    }
+  }
+  .content {
+    @include rect(100%, auto);
+    margin-top: 0.4rem;
+    // background-color: #f5f5f5;
+    .list{
+     // background: #000;
+      z-index: 99999;
+      display: block;
+      @include rect(100%, 0.62rem);
+      position: relative;
+      //  background-color: rgb(150, 213, 238);
+      border-bottom: 1px solid #eee;
+       overflow: hidden;
+        z-index: 999;
+        background: #fff;
+      .code_pic {
+        display: block;
+        @include rect(0.45rem, 0.45rem);
+        margin: 0.09rem 0 0.03rem 0.05rem;
+        line-height: 0.45rem;
+        text-align: center;
+        float: left;
+        img {
+          @include rect(100%, 100%);
+        }
+      }
+      .listRight {
+        @include rect(75%, 100%);
+        margin-left: 2.5%;
+        // background-color: pink;
+        float: left;
+        z-index: 9999;
+        // overflow: hidden;
+        .codeName {
+          @include rect(100%, 0.24rem);
+          //background-color: #f66;
+          margin-top: 0.09rem;
+          margin-bottom: 0.06rem;
+          font-size: 0.16rem;
+          line-height: 0.24rem;
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+        .codeNumber {
+          @include rect(100%, 0.15rem);
+          margin-bottom: 0.03rem;
+          // background-color:green;
+          font-size: 0.12rem;
+          line-height: 0.15rem;
+          //color: #fff;
+          color: #a4a4a4;
+        }
+      }
+      em {
+        position: absolute;
+        @include rect(0.49rem, 0.49rem);
+        background-color: #fff;
+        text-align: center;
+        line-height: 0.5rem;
+        // transform: rotate(-45deg);
+        opacity: 0.5;
+        border-radius: 0.3rem;
+        right: 0.32rem;
+        top: 0.07rem;
+        bottom: 0;
+        img {
+          @include rect(100%, 100%);
+        }
+      }
+      .downCode {
+        z-index: 9999;
+        display: block;
+        margin-right: 0.08rem;
+        @include rect(0.2rem, 0.2rem);
+        // background: sienna;
+        float: right;
+        margin-top: 0.27rem;
+        margin-bottom: 0.03rem;
+        img {
+          @include rect(100%, 100%);
+        }
+      }
+    }
+  }
+}
+
+// 添加二维码 addCode
+.addCode_box,
+.datail_box,
+.Updata_box {
+  @include rect(100%, 100%);
+  //margin: 0 1%;
+  margin-top: 0.4rem;
+
+  .top {
+     margin: 0;
+    .submit {
+     border: none;
+     background-color: #fff;
+     color: #ddd;
+      font-size: 0.14rem !important;
+    }
+  }
+  .add_content {
+    @include rect(90%, auto);
+    margin: 0 5%;
+    li {
+      @include rect(100%, 0.45rem);
+      // background-color: #fff;
+      padding: 0.05rem 0;
+      border-bottom: 1px solid #eee;
+      @include flexbox();
+      @include flex-direction(row);
+      @include justify-content(space-between);
+      @include align-items(center);
+      @include align-content(center);
+      .list_R {
+        @include rect(70%, 0.45rem);
+        position: relative;
+        text-align: right;
+        line-height: 0.45rem;
+        padding-right: 0.15rem;
+        overflow-x: auto;
+        white-space: nowrap !important;
+        input[type="text"] {
+          border: none;
+          height: 0.4rem;
+          line-height: 0.45rm;
+          text-align: right;
+        }
+        .btn {
+          position: absolute;
+          display: inline-block;
+          width: 0.1rem;
+          height: 0.1rem;
+          border-top: 1px solid #333;
+          border-right: 1px solid #333;
+          right: 0.05rem;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          transform: rotate(45deg);
+        }
+        p {
+          display: inline-block;
+          line-height: 0.4rem;
+          input[type="radio"] {
+            @include rect(0.12rem, 0.12rem);
+            margin-right: 0.06rem;
+            margin-top: 0.12rem;
+          }
+        }
+        .end {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+// 二维码详情 datailCode
+.datail_box {
+  margin-top: 0;
+  .CodeBox {
+    @include rect(2.4rem, 2.4rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: antiquewhite;
+  }
+  .codeDatail {
+    @include rect(80%, 0.4rem);
+    margin: 0 10%;
+    margin-top: 0.2rem;
+    button {
+      @include rect(100%, 100%);
+      border: none;
+      background-color: #66cc66;
+      color: #fff;
+      border-radius: 0.03rem;
+    }
+  }
+}
+//修改二维码
+.Updata_box｛ .add_content {
+  margin-top: 0.4rem;
+}
